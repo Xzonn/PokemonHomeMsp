@@ -1,3 +1,8 @@
-input/
+.Trash/
+
 *.png
+*.webp
+
+*.xlsx
+
 *.zip
