@@ -1,5 +1,5 @@
-.sprite-icon { display: inline-block; width: 56px; height: 56px; background: url(//s0.52poke.wiki/wiki/a/a2/MSP_Normal.webp) 9999px 9999px no-repeat; vertical-align: middle; background-size: 2240px 2184px; }
-.sprite-icon-shiny { display: inline-block; width: 56px; height: 56px; background: url(//s0.52poke.wiki/wiki/8/84/MSP_Shiny.webp) 9999px 9999px no-repeat; vertical-align: middle; background-size: 2240px 2184px; }
+.sprite-icon { display: inline-block; width: 56px; height: 56px; background: url(//media.52poke.com/wiki/a/a2/MSP_Normal.webp) 9999px 9999px no-repeat; vertical-align: middle; background-size: 2240px 2240px; }
+.sprite-icon-shiny { display: inline-block; width: 56px; height: 56px; background: url(//media.52poke.com/wiki/8/84/MSP_Shiny.webp) 9999px 9999px no-repeat; vertical-align: middle; background-size: 2240px 2240px; }
 
 .sprite-icon-000, .sprite-icon-0000 { background-position: 0 0; }
 .sprite-icon-Egg { background-position: -56px 0; }
@@ -1555,3 +1555,13 @@
 .sprite-icon-1017W { background-position: -1736px -2128px; }
 .sprite-icon-1017H { background-position: -1792px -2128px; }
 .sprite-icon-1017C { background-position: -1848px -2128px; }
+.sprite-icon-1018 { background-position: -1904px -2128px; }
+.sprite-icon-1019 { background-position: -1960px -2128px; }
+.sprite-icon-1020 { background-position: -2016px -2128px; }
+.sprite-icon-1021 { background-position: -2072px -2128px; }
+.sprite-icon-1022 { background-position: -2128px -2128px; }
+.sprite-icon-1023 { background-position: -2184px -2128px; }
+.sprite-icon-1024 { background-position: 0 -2184px; }
+.sprite-icon-1024T { background-position: -56px -2184px; }
+.sprite-icon-1024S { background-position: -112px -2184px; }
+.sprite-icon-1025 { background-position: -168px -2184px; }

@@ -47,8 +47,8 @@ for image_type in IMAGE_TYPES:
   files[image_type] = image
 
 css_output = (
-  f".sprite-icon {{ display: inline-block; width: {css_width}px; height: {css_height}px; background: url(//s0.52poke.wiki/wiki/a/a2/MSP_Normal.webp) 9999px 9999px no-repeat; vertical-align: middle; background-size: {width_n * css_width}px {height_n * css_height}px; }}\n"
-  f".sprite-icon-shiny {{ display: inline-block; width: {css_width}px; height: {css_width}px; background: url(//s0.52poke.wiki/wiki/8/84/MSP_Shiny.webp) 9999px 9999px no-repeat; vertical-align: middle; background-size: {width_n * css_width}px {height_n * css_height}px; }}\n"
+  f".sprite-icon {{ display: inline-block; width: {css_width}px; height: {css_height}px; background: url(//media.52poke.com/wiki/a/a2/MSP_Normal.webp) 9999px 9999px no-repeat; vertical-align: middle; background-size: {width_n * css_width}px {height_n * css_height}px; }}\n"
+  f".sprite-icon-shiny {{ display: inline-block; width: {css_width}px; height: {css_width}px; background: url(//media.52poke.com/wiki/8/84/MSP_Shiny.webp) 9999px 9999px no-repeat; vertical-align: middle; background-size: {width_n * css_width}px {height_n * css_height}px; }}\n"
   "\n"
 )
 
@@ -68,9 +68,9 @@ for i, msp_icon in enumerate(msp_data):
     if os.path.exists(_):
       file_path = _
     elif id_52poke in ph_data:
-      _ = ph_data[id_52poke]["文件名"]
+      _ = "poke_capture_" + ph_data[id_52poke]["文件名"] + ".png"
       if image_type == "Shiny":
-        _ = _.replace("_n^u.png", "_r^u.png")
+        _ = _.replace("_n.png", "_r.png")
       _ = f"PH/{image_type}/{_}"
       if os.path.exists(_):
         file_path = _
@@ -88,4 +88,4 @@ with open(f"Msp.css", "w", -1, "utf8") as writer:
   writer.write(css_output.replace("-0px", "0"))
 
 for image_type in files:
-  files[image_type].save(f"MSP_{image_type}.webp")
+  files[image_type].save(f"MSP_{image_type}.webp", quality=50, method=6, lossless=False)
