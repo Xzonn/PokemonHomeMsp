@@ -1,3 +1,4 @@
+import datetime
 import os
 import math
 import re
@@ -22,6 +23,7 @@ ph_data = {
   i["神奇宝贝百科编号"]: i for i in _
 }
 
+today = datetime.datetime.now().strftime("%Y%m%d")
 total = len(msp_data)
 width_n = 40
 height_n = math.ceil(total / width_n)
@@ -47,8 +49,8 @@ for image_type in IMAGE_TYPES:
   files[image_type] = image
 
 css_output = (
-  f".sprite-icon {{ display: inline-block; width: {css_width}px; height: {css_height}px; background: url(//media.52poke.com/wiki/a/a2/MSP_Normal.webp) 9999px 9999px no-repeat; vertical-align: middle; background-size: {width_n * css_width}px {height_n * css_height}px; }}\n"
-  f".sprite-icon-shiny {{ display: inline-block; width: {css_width}px; height: {css_width}px; background: url(//media.52poke.com/wiki/8/84/MSP_Shiny.webp) 9999px 9999px no-repeat; vertical-align: middle; background-size: {width_n * css_width}px {height_n * css_height}px; }}\n"
+  f".sprite-icon {{ display: inline-block; width: {css_width}px; height: {css_height}px; background: url(//media.52poke.com/wiki/a/a2/MSP_Normal.webp?v={today}) 9999px 9999px no-repeat; vertical-align: middle; background-size: {width_n * css_width}px {height_n * css_height}px; }}\n"
+  f".sprite-icon-shiny {{ display: inline-block; width: {css_width}px; height: {css_width}px; background: url(//media.52poke.com/wiki/8/84/MSP_Shiny.webp?v={today}) 9999px 9999px no-repeat; vertical-align: middle; background-size: {width_n * css_width}px {height_n * css_height}px; }}\n"
   "\n"
 )
 

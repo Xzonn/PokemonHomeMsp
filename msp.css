@@ -1,5 +1,5 @@
-.sprite-icon { display: inline-block; width: 56px; height: 56px; background: url(//media.52poke.com/wiki/a/a2/MSP_Normal.webp) 9999px 9999px no-repeat; vertical-align: middle; background-size: 2240px 2240px; }
-.sprite-icon-shiny { display: inline-block; width: 56px; height: 56px; background: url(//media.52poke.com/wiki/8/84/MSP_Shiny.webp) 9999px 9999px no-repeat; vertical-align: middle; background-size: 2240px 2240px; }
+.sprite-icon { display: inline-block; width: 56px; height: 56px; background: url(//media.52poke.com/wiki/a/a2/MSP_Normal.webp?v=20231214) 9999px 9999px no-repeat; vertical-align: middle; background-size: 2240px 2240px; }
+.sprite-icon-shiny { display: inline-block; width: 56px; height: 56px; background: url(//media.52poke.com/wiki/8/84/MSP_Shiny.webp?v=20231214) 9999px 9999px no-repeat; vertical-align: middle; background-size: 2240px 2240px; }
 
 .sprite-icon-000, .sprite-icon-0000 { background-position: 0 0; }
 .sprite-icon-Egg { background-position: -56px 0; }
