@@ -1,7 +1,8 @@
 import datetime
-import os
 import math
+import os
 import re
+
 from PIL import Image
 
 with open("MSP顺序.txt", "r", -1, "utf8") as reader:
@@ -32,7 +33,7 @@ css_width, css_height = 56, 56
 
 IMAGE_TYPES = ["Normal", "Shiny"]
 
-def draw_icon(icon: Image, base: Image, width: int, height: int, left: int, top: int):
+def draw_icon(icon: Image.Image, base: Image.Image, width: int, height: int, left: int, top: int):
   if icon.width != width or icon.height != height:
     new_icon_width = max(width, icon.width)
     new_icon_height = max(height, icon.height)
@@ -74,6 +75,10 @@ for i, msp_icon in enumerate(msp_data):
       if image_type == "Shiny":
         _ = _.replace("_n.png", "_r.png")
       _ = f"PH/{image_type}/{_}"
+      if os.path.exists(_):
+        file_path = _
+    if not file_path and image_type == "Shiny":
+      _ = f"Addition/Normal/{id_52poke}.png"
       if os.path.exists(_):
         file_path = _
     if not file_path:
