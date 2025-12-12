@@ -50,8 +50,9 @@ for image_type in IMAGE_TYPES:
   files[image_type] = image
 
 css_output = (
-  f".sprite-icon {{ display: inline-block; width: {css_width}px; height: {css_height}px; background: url(//media.52poke.com/wiki/a/a2/MSP_Normal.webp?v={today}) 9999px 9999px no-repeat; vertical-align: middle; background-size: {width_n * css_width}px {height_n * css_height}px; }}\n"
-  f".sprite-icon-shiny {{ display: inline-block; width: {css_width}px; height: {css_width}px; background: url(//media.52poke.com/wiki/8/84/MSP_Shiny.webp?v={today}) 9999px 9999px no-repeat; vertical-align: middle; background-size: {width_n * css_width}px {height_n * css_height}px; }}\n"
+  f".sprite-icon, .sprite-icon-shiny {{ display: inline-block; font-size: {css_width}px; width: 1em; height: 1em; background-repeat: no-repeat; background-size: {width_n}em auto; vertical-align: middle; }}\n"
+  f".sprite-icon {{ background-image: url(//media.52poke.com/wiki/a/a2/MSP_Normal.webp?v={today}); }}"
+  f".sprite-icon-shiny {{ background-image: url(//media.52poke.com/wiki/8/84/MSP_Shiny.webp?v={today}); }}"
   "\n"
 )
 
@@ -63,7 +64,7 @@ for i, msp_icon in enumerate(msp_data):
     css_class += f", .sprite-icon-0{id_52poke}"
   if id_52poke == "128PC":
     css_class += ", .sprite-icon-128P, .sprite-icon-0128P"
-  css_output += f"{css_class} {{ background-position: -{x * css_width}px -{y * css_width}px; }}\n"
+  css_output += f"{css_class} {{ background-position: -{x}em -{y}em; }}\n".replace("-0em", "0")
 
   for image_type in IMAGE_TYPES:
     file_path = None

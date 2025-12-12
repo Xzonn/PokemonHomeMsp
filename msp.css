@@ -1,5 +1,5 @@
-.sprite-icon { display: inline-block; width: 56px; height: 56px; background: url(//media.52poke.com/wiki/a/a2/MSP_Normal.webp?v=20251019) 9999px 9999px no-repeat; vertical-align: middle; background-size: 2240px 2240px; }
-.sprite-icon-shiny { display: inline-block; width: 56px; height: 56px; background: url(//media.52poke.com/wiki/8/84/MSP_Shiny.webp?v=20251019) 9999px 9999px no-repeat; vertical-align: middle; background-size: 2240px 2240px; }
+.sprite-icon { display: inline-block; width: 56px; height: 56px; background: url(//media.52poke.com/wiki/a/a2/MSP_Normal.webp?v=20251213) 9999px 9999px no-repeat; vertical-align: middle; background-size: 2240px 2296px; }
+.sprite-icon-shiny { display: inline-block; width: 56px; height: 56px; background: url(//media.52poke.com/wiki/8/84/MSP_Shiny.webp?v=20251213) 9999px 9999px no-repeat; vertical-align: middle; background-size: 2240px 2296px; }
 
 .sprite-icon-000, .sprite-icon-0000 { background-position: 0 0; }
 .sprite-icon-Egg { background-position: -56px 0; }
@@ -1592,3 +1592,25 @@
 .sprite-icon-718M, .sprite-icon-0718M { background-position: -1568px -2184px; }
 .sprite-icon-780M, .sprite-icon-0780M { background-position: -1624px -2184px; }
 .sprite-icon-870M, .sprite-icon-0870M { background-position: -1680px -2184px; }
+.sprite-icon-026MX, .sprite-icon-0026MX { background-position: -1736px -2184px; }
+.sprite-icon-026MY, .sprite-icon-0026MY { background-position: -1792px -2184px; }
+.sprite-icon-358M, .sprite-icon-0358M { background-position: -1848px -2184px; }
+.sprite-icon-359M, .sprite-icon-0359M { background-position: -1904px -2184px; }
+.sprite-icon-398M, .sprite-icon-0398M { background-position: -1960px -2184px; }
+.sprite-icon-445MZ, .sprite-icon-0445MZ { background-position: -2016px -2184px; }
+.sprite-icon-448MZ, .sprite-icon-0448MZ { background-position: -2072px -2184px; }
+.sprite-icon-485M, .sprite-icon-0485M { background-position: -2128px -2184px; }
+.sprite-icon-491M, .sprite-icon-0491M { background-position: -2184px -2184px; }
+.sprite-icon-623M, .sprite-icon-0623M { background-position: 0 -2240px; }
+.sprite-icon-678M, .sprite-icon-0678M { background-position: -56px -2240px; }
+.sprite-icon-740M, .sprite-icon-0740M { background-position: -112px -2240px; }
+.sprite-icon-768M, .sprite-icon-0768M { background-position: -168px -2240px; }
+.sprite-icon-801M, .sprite-icon-0801M { background-position: -224px -2240px; }
+.sprite-icon-801OM, .sprite-icon-0801OM { background-position: -280px -2240px; }
+.sprite-icon-807M, .sprite-icon-0807M { background-position: -336px -2240px; }
+.sprite-icon-952M, .sprite-icon-0952M { background-position: -392px -2240px; }
+.sprite-icon-970M, .sprite-icon-0970M { background-position: -448px -2240px; }
+.sprite-icon-978M, .sprite-icon-0978M { background-position: -504px -2240px; }
+.sprite-icon-978DM, .sprite-icon-0978DM { background-position: -560px -2240px; }
+.sprite-icon-978SM, .sprite-icon-0978SM { background-position: -616px -2240px; }
+.sprite-icon-998M, .sprite-icon-0998M { background-position: -672px -2240px; }
