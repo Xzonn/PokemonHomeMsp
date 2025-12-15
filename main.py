@@ -51,19 +51,22 @@ for image_type in IMAGE_TYPES:
 
 css_output = (
   f".sprite-icon, .sprite-icon-shiny {{ display: inline-block; font-size: {css_width}px; width: 1em; height: 1em; background-repeat: no-repeat; background-size: {width_n}em auto; vertical-align: middle; }}\n"
-  f".sprite-icon {{ background-image: url(//media.52poke.com/wiki/a/a2/MSP_Normal.webp?v={today}); }}"
-  f".sprite-icon-shiny {{ background-image: url(//media.52poke.com/wiki/8/84/MSP_Shiny.webp?v={today}); }}"
+  f".sprite-icon {{ background-image: url(//media.52poke.com/wiki/a/a2/MSP_Normal.webp?v={today}); }}\n"
+  f".sprite-icon-shiny {{ background-image: url(//media.52poke.com/wiki/8/84/MSP_Shiny.webp?v={today}); }}\n"
   "\n"
 )
 
 x, y = 0, 0
 for i, msp_icon in enumerate(msp_data):
-  id_52poke = msp_icon["神奇宝贝百科编号"]
-  css_class = f".sprite-icon-{id_52poke}"
-  if re.search(r"^\d\d\d(?:\D.*)?$", id_52poke):
-    css_class += f", .sprite-icon-0{id_52poke}"
-  if id_52poke == "128PC":
-    css_class += ", .sprite-icon-128P, .sprite-icon-0128P"
+  id_52pokes = msp_icon["神奇宝贝百科编号"].split("|")
+  id_52poke = id_52pokes[0]
+  css_class = ""
+  for id  in id_52pokes:
+    css_class += f", .sprite-icon-{id}"
+    if re.search(r"^\d\d\d(?:\D.*)?$", id):
+      css_class += f", .sprite-icon-0{id}"
+  css_class = css_class[2:]
+
   css_output += f"{css_class} {{ background-position: -{x}em -{y}em; }}\n".replace("-0em", "0")
 
   for image_type in IMAGE_TYPES:
